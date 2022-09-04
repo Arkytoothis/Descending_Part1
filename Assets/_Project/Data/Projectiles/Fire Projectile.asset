@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287f166bc4e5ea64e83e472449c10f72, type: 3}
+  m_Name: Fire Projectile
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 6003555247625046418, guid: 5e9528db95b6a0a4abfb301aaaa56930, type: 3}
+  Speed: 50
+  MinDamage: 10
+  MaxDamage: 20
+  DamageType: {fileID: 11400000, guid: 8ff2c276d8d17c242a2c7d9d56e56cac, type: 2}

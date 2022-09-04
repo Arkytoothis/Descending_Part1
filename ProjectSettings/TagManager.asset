@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Feature
+  - Hero
+  - Encounter
+  - Treasure
+  - Fire
+  - Feature Interaction
+  - Combat Tile
+  - Combat Collider Hero
+  - Combat Collider Enemy
+  - CinemachineTarget
+  - PW - Nature
+  - PW - Prop
+  - PW - Building
+  - Synty Tree
+  - Synty Medium Farm
+  - Synty Small Farm
+  - Enemy
+  - Projectile
+  - Projectile Detector
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Ground
+  - Water
+  - UI
+  - Player
+  - 
+  - PW_VFX
+  - Minimap
+  - PortraitLight
+  - PW_Object_Small
+  - PW_Object_Medium
+  - PW_Object_Large
+  - Combat Tile
+  - Hero
+  - Enemy
+  - 
+  - 
+  - 
+  - Feature
+  - Building
+  - Encounter
+  - Treasure
+  - Interactable
+  - 
+  - 
+  - Floor
+  - Wall
+  - Ladder
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

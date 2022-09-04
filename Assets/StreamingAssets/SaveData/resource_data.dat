@@ -1,0 +1,8 @@
+{
+    "$id": 0,
+    "$type": "0|Descending.Party.ResourceSaveData, Descending",
+    "_coins": 100,
+    "_gems": 0,
+    "_materials": 0,
+    "_supplies": 10
+}
