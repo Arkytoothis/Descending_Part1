@@ -20,7 +20,6 @@ namespace Descending.Scene_Overworld
         [SerializeField] private GameObject _guiPrefab = null;
         [SerializeField] private PartyManager _partyManager = null;
         [SerializeField] private PortraitRoom _portraitRoom = null;
-        [SerializeField] private WorldGenerator _worldGenerator = null;
         [SerializeField] private EncounterManager _encounterManager = null;
 
         private GuiManager _gui = null;
@@ -46,7 +45,6 @@ namespace Descending.Scene_Overworld
             ItemGenerator.Setup();
             EncounterGenerator.Setup();
             TreasureGenerator.Setup();
-            _worldGenerator.Generate(_partyManager, _sceneLoadData);
             _encounterManager.Setup();
         }
 

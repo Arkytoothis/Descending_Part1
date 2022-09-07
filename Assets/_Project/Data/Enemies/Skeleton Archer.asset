@@ -86,4 +86,9 @@ MonoBehaviour:
   - enemy_wound_2
   - enemy_wound_4
   - enemy_wound_5
-  Equipment: []
+  Equipment:
+  - _item: {fileID: 11400000, guid: b2bfb97827050d6448ea33b637d137e7, type: 2}
+    _material: {fileID: 11400000, guid: 0e316ba9cf40d164f9444a666e0ccdab, type: 2}
+    _quality: {fileID: 11400000, guid: d5e5fb5f6057e3c4fb64adb3c9b86604, type: 2}
+    _prefix: {fileID: 0}
+    _suffix: {fileID: 0}

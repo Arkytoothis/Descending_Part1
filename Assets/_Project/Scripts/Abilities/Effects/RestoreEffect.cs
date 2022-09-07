@@ -16,8 +16,8 @@ namespace Descending.Abilities
         [SerializeField] private int _minimumValue = 0;
         [SerializeField] private int _maximumValue = 0;
 
-        [SerializeField] private GameObject _casterEffectPrefab = null;
-        [SerializeField] private GameObject _targetEffectPrefab = null;
+        //[SerializeField] private GameObject _casterEffectPrefab = null;
+        //[SerializeField] private GameObject _targetEffectPrefab = null;
         
         public AttributeDefinition Attribute => _attribute;
         public int MinimumValue => _minimumValue;

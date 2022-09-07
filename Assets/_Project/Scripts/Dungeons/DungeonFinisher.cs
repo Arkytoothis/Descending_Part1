@@ -9,11 +9,13 @@ namespace Descending.Dungeons
 {
     public class DungeonFinisher : BaseAdapter
     {
+        [SerializeField] private AstarPath _pathfinder = null;
         [SerializeField] private UndergroundManager _undergroundManager = null;
 
         protected override void Run(DungeonGenerator generator)
         {
             //Debug.Log("Finishing Dungeon");
+            _pathfinder.Scan();
             _undergroundManager.SetupParty();
         }
     }

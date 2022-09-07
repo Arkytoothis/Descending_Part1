@@ -6,7 +6,7 @@ namespace Descending.World
 {
     public class SceneTransition : MonoBehaviour
     {
-        [SerializeField] private string _key = "";
+        //[SerializeField] private string _key = "";
         
         
     }

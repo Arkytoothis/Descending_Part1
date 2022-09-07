@@ -74,7 +74,6 @@ namespace Descending.Party
 
         public void OnRegisterSpawner(PartySpawner spawner)
         {
-            Debug.Log("RegisteringSpawner");
             _spawner = spawner;
             _spawner.SpawnParty(_partyObject);
         }

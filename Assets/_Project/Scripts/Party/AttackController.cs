@@ -8,7 +8,6 @@ using Descending.Enemies;
 using Descending.Equipment;
 using Descending.Gui;
 using Descending.Party;
-using ScriptableObjectArchitecture;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -18,6 +17,7 @@ namespace Descending.Player
     {
         [SerializeField] private PartyManager _partyManager = null;
         [SerializeField] private Transform _projectileSpawnPoint = null;
+        [SerializeField] private Transform _attackEffectSpawnPoint = null;
 
         private Camera _camera = null;
         private bool _canAttack = true;
@@ -81,6 +81,7 @@ namespace Descending.Player
 
         private void MeleeAttack(Item weapon, Hero hero, Enemy target)
         {
+            Utilities.PlayParticleSystem(weapon.GetWeaponData().AttackEffectPrefab, _attackEffectSpawnPoint.position);
             int attackRoll = hero.Attributes.GetStatistic("Attack").Current + Random.Range(0, 100);
             int defenseRoll = target.Attributes.GetStatistic("Dodge").Current + Random.Range(0, 100);
 

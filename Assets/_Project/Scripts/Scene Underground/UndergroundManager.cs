@@ -48,7 +48,6 @@ namespace Descending.Scene_Underground
         
         private void SetupGui()
         {
-            Debug.Log("SetupGui");
             GameObject clone = Instantiate(_guiPrefab, null);
             _gui = clone.GetComponent<GuiManager>();
             _gui.Setup();

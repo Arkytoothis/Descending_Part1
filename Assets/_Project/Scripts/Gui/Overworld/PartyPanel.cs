@@ -15,13 +15,13 @@ namespace Descending.Gui
     {
         [SerializeField] private GameObject _container = null;
         [SerializeField] private GameObject _heroWidgetPrefab = null;
-        [SerializeField] private GameObject _actionWidgetPrefab = null;
+        //[SerializeField] private GameObject _actionWidgetPrefab = null;
         [SerializeField] private Transform _heroWidgetsParent = null;
-        [SerializeField] private Transform _actionWidgetsParent = null;
-        [SerializeField] private Transform _accessoryWidgetsParent = null;
+        //[SerializeField] private Transform _actionWidgetsParent = null;
+        //[SerializeField] private Transform _accessoryWidgetsParent = null;
         [SerializeField] private TMP_Text _messageLabel = null;
         [SerializeField] private List<ActionWidget> _actionWidgets = null;
-        [SerializeField] private List<ActionWidget> _accessoryWidgets = null;
+        //[SerializeField] private List<ActionWidget> _accessoryWidgets = null;
         
         private PartyData _partyData = null;
         private List<HeroWidget> _heroWidgets = null;

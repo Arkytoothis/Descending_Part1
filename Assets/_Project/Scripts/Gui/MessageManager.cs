@@ -8,7 +8,6 @@ namespace Descending.Gui
 {
     public class MessageManager : Singleton<MonoBehaviour>
     {
-        [SerializeField] private GameMessageEvent onDisplayMessage = null;
-        
+        //[SerializeField] private GameMessageEvent onDisplayMessage = null;
     }
 }

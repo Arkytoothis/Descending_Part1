@@ -24,6 +24,7 @@ namespace Descending.Equipment
         [SerializeField] private int _minDamage = 0;
         [SerializeField] private int _maxDamage = 0;
         [SerializeField] private ProjectileDefinition _projectile = null;
+        [SerializeField] private GameObject _attackEffectPrefab = null;
         [SerializeField] private AnimatorOverrideController _animatorOverride = null;
 
         [SoundGroupAttribute] public List<string> HitSounds;
@@ -39,6 +40,7 @@ namespace Descending.Equipment
         public int MaxDamage => _maxDamage;
         public float KnockbackStrength => _knockbackStrength;
         public AnimatorOverrideController AnimatorOverride => _animatorOverride;
+        public GameObject AttackEffectPrefab => _attackEffectPrefab;
 
         public WeaponData(WeaponData weaponData)
         {
