@@ -5,6 +5,7 @@ using DarkTonic.MasterAudio;
 using Descending.Attributes;
 using Descending.Core;
 using Descending.Equipment;
+using Descending.Gui;
 using ScriptableObjectArchitecture;
 using UnityEngine;
 using AttributesController = Descending.Attributes.AttributesController;
@@ -15,18 +16,18 @@ namespace Descending.Characters
 {
     public class Hero : GameEntity
     {
+        [SerializeField] private GameObject _partyObject = null;
         [SerializeField] private RuntimeAnimatorController _portraitController = null;
-        
         [SerializeField] private HeroData _heroData = null;
         [SerializeField] private AttributesController _attributes = null;
         [SerializeField] private SkillsController _skills = null;
         [SerializeField] private InventoryController _inventory = null;
         [SerializeField] private AbilityController _abilities = null;
-        
         [SerializeField] private Transform _portraitMount = null;
         [SerializeField] private Transform _hitEffectTransform = null;
         
         [SerializeField] private IntEvent onSyncHero = null;
+        [SerializeField] private FloatingTextParametersEvent onDisplayDamageText = null;
         
         private GameObject _portraitModel = null;
         private PortraitMount _portrait = null;
@@ -42,8 +43,9 @@ namespace Descending.Characters
         public BodyRenderer PortraitRenderer => _portraitRenderer;
         public Transform HitEffectTransform => _hitEffectTransform;
 
-        public void Setup(Genders gender, RaceDefinition race, ProfessionDefinition profession, int listIndex)
+        public void Setup(GameObject partyObject, Genders gender, RaceDefinition race, ProfessionDefinition profession, int listIndex)
         {
+            _partyObject = partyObject;
             _portraitModel = HeroBuilder.SpawnPortraitPrefab(gender, race, _portraitMount);
             _portraitRenderer = _portraitModel.GetComponent<BodyRenderer>();
             _portraitRenderer.SetupBody(gender, race, profession);
@@ -63,8 +65,9 @@ namespace Descending.Characters
             }
         }
 
-        public void Load(HeroSaveData saveData)
+        public void Load(GameObject partyObject, HeroSaveData saveData)
         {
+            _partyObject = partyObject;
             RaceDefinition race = Database.instance.Races.GetRace(saveData.HeroData.RaceKey);
             ProfessionDefinition profession = Database.instance.Profession.GetProfession(saveData.HeroData.ProfessionKey);
 
@@ -102,6 +105,7 @@ namespace Descending.Characters
             if (IsAlive() == false) return;
             
             _attributes.Vitals[attribute].Damage(amount);
+            onDisplayDamageText.Invoke(new FloatingTextParameters(amount.ToString(), _heroData.ListIndex, 200));
             
             if (_attributes.Vitals[attribute].Current <= 0)
             {
@@ -109,11 +113,18 @@ namespace Descending.Characters
             }
             else
             {
-                //string sound = _heroData.RaceDefinition.GetWoundSound(_heroData.Gender);
-                //MasterAudio.PlaySound3DAtTransform(sound, transform, .3f, 1f);
+                string sound = _heroData.RaceDefinition.GetWoundSound(_heroData.Gender);
+                float volume = 0.5f;//Random.Range(0.4f, 0.5f);
+                float pitch = Random.Range(0.95f, 1.05f);
+                MasterAudio.PlaySound3DAtTransform(sound, _partyObject.transform, volume, pitch);
             }
             
             SyncData();
+        }
+
+        public void DodgedAttack()
+        {
+            onDisplayDamageText.Invoke(new FloatingTextParameters("Dodge", _heroData.ListIndex, 100));
         }
 
         public override void UseActions(int amount)

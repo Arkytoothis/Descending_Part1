@@ -62,6 +62,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 216592670160634647}
+  _openSounds:
+  - door_old_wooden_squeak_01
+  - door_old_wooden_squeak_03
+  _closeSounds:
+  - door_old_wooden_squeak_04
 --- !u!114 &216592670160634647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +159,7 @@ MonoBehaviour:
         AnimateRotationTarget: {fileID: 279058516879228860}
         Mode: 2
         RotationSpace: 1
-        AnimateRotationDuration: 2
+        AnimateRotationDuration: 1.5
         RemapCurveZero: 0
         RemapCurveOne: 360
         AnimateX: 1
@@ -321,7 +326,7 @@ MonoBehaviour:
         AnimateRotationTarget: {fileID: 279058516879228860}
         Mode: 2
         RotationSpace: 1
-        AnimateRotationDuration: 2
+        AnimateRotationDuration: 1.5
         RemapCurveZero: 0
         RemapCurveOne: 360
         AnimateX: 1

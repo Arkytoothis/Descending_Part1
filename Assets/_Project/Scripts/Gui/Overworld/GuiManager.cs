@@ -19,6 +19,8 @@ namespace Descending.Gui
         [SerializeField] private GameObject _combatPanelPrefab = null;
         [SerializeField] private GameObject _minimapPanelPrefab = null;
         [SerializeField] private GameObject _tooltipPrefab = null;
+        
+        [SerializeField] private TextManager_UI _textManager_UI = null;
 
         [SerializeField] private BoolEvent onEndCombat = null;
 
@@ -41,6 +43,7 @@ namespace Descending.Gui
             
             _windowManager.Setup();
             _windowManager.transform.SetAsLastSibling();
+            _textManager_UI.transform.SetAsLastSibling();
             
             WorldMode();
         }

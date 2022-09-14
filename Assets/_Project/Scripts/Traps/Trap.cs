@@ -7,6 +7,11 @@ namespace Descending.Traps
 {
     public abstract class Trap : MonoBehaviour
     {
+        protected bool _isActive = true;
+
+        public bool IsActive => _isActive;
+
         public abstract void ApplyDamage(PartyData partyData);
+        public abstract void SetActive(bool isActive);
     }
 }

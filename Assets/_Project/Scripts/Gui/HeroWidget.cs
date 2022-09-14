@@ -21,6 +21,7 @@ namespace Descending.Gui
         [SerializeField] private Image _border = null;
         [SerializeField] private Color _selectedColor = Color.white;
         [SerializeField] private Color _deselectedColor = Color.white;
+        [SerializeField] private Transform _textTransform = null;
 
         [SerializeField] private HeroWidgetEvent onSetCurrentHeroWidget = null;
         [SerializeField] private IntEvent onSelectHero = null;
@@ -32,6 +33,7 @@ namespace Descending.Gui
         
         public Hero Hero => _hero;
         public bool CanClick => _canClick;
+        public Transform TextTransform => _textTransform;
 
         public void SetHero(PartyPanel partyPanel, Hero hero, int index)
         {

@@ -15,8 +15,16 @@ namespace Descending.Dungeons
         protected override void Run(DungeonGenerator generator)
         {
             //Debug.Log("Finishing Dungeon");
-            _pathfinder.Scan();
             _undergroundManager.SetupParty();
+
+            StartCoroutine(AstarScan_Coroutine());
+        }
+
+        private IEnumerator AstarScan_Coroutine()
+        {
+            yield return 0;
+            
+            _pathfinder.Scan();
         }
     }
 }

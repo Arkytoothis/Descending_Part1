@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 5480946836283788501}
   - component: {fileID: 1644538626132722367}
   - component: {fileID: 7561410803451359808}
+  - component: {fileID: 3945881867625039366}
   m_Layer: 27
   m_Name: SM_Env_Dwarf_Floor_05
   m_TagString: Untagged
@@ -163,6 +164,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.0003138, y: 0.26153904, z: 5.000382}
   m_Center: {x: -2.4998343, y: -0.09824653, z: 2.5002105}
+--- !u!114 &3945881867625039366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533456588477160431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0faf37fb839e32a44a7f4dade7d802d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tag: 3
 --- !u!1 &1475991553604198122
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,6 +324,7 @@ GameObject:
   - component: {fileID: 2025842789319252705}
   - component: {fileID: 2353932505824211865}
   - component: {fileID: 6395752449343842567}
+  - component: {fileID: 8678410828533319905}
   m_Layer: 27
   m_Name: SM_Env_Dwarf_Floor_04
   m_TagString: Untagged
@@ -395,6 +410,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.0003123, y: 0.26153904, z: 5.0003805}
   m_Center: {x: -2.4998338, y: -0.09824653, z: 2.5002098}
+--- !u!114 &8678410828533319905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2953088507116853282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0faf37fb839e32a44a7f4dade7d802d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tag: 3
 --- !u!1 &5843539582623764351
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,6 +631,7 @@ GameObject:
   - component: {fileID: 4090032940372412482}
   - component: {fileID: 6661462075658743263}
   - component: {fileID: 3740525428172366145}
+  - component: {fileID: 1659305310397429100}
   m_Layer: 27
   m_Name: SM_Env_Dwarf_Floor_02
   m_TagString: Untagged
@@ -688,6 +717,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.0003123, y: 0.26153904, z: 5.0003805}
   m_Center: {x: -2.4998338, y: -0.09824653, z: 2.5002098}
+--- !u!114 &1659305310397429100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769908080369976203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0faf37fb839e32a44a7f4dade7d802d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tag: 3
 --- !u!1 &9191611687779865204
 GameObject:
   m_ObjectHideFlags: 0

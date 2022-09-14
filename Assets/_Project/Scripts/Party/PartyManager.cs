@@ -62,7 +62,7 @@ namespace Descending.Party
 
         private Hero SpawnHero(int index, Genders gender, RaceDefinition race, ProfessionDefinition profession)
         {
-            Hero hero = HeroBuilder.BuildHero(gender, race, profession, index);
+            Hero hero = HeroBuilder.BuildHero(_partyObject, gender, race, profession, index);
 
             return hero;
         }
@@ -113,7 +113,7 @@ namespace Descending.Party
 
             for (int i = 0; i < saveData.Count; i++)
             {
-                _partyData.AddHero(HeroBuilder.LoadHero(saveData[i]), _heroesParent);
+                _partyData.AddHero(HeroBuilder.LoadHero(_partyObject, saveData[i]), _heroesParent);
             }
 
             _stockpile.SyncStockpile();

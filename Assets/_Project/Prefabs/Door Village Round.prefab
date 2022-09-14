@@ -62,6 +62,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 2912360927360751227}
+  _openSounds:
+  - door_old_wooden_squeak_01
+  - door_old_wooden_squeak_03
+  _closeSounds:
+  - door_old_wooden_squeak_04
 --- !u!114 &2912360927360751227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,8 +90,10 @@ MonoBehaviour:
   ForcedTimescaleMode: 1
   DurationMultiplier: 1
   DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
   CooldownDuration: 0
   InitialDelay: 0
+  CanPlay: 1
   CanPlayWhileAlreadyPlaying: 0
   ChanceToPlay: 100
   FeedbacksIntensity: 1
@@ -114,6 +121,7 @@ MonoBehaviour:
   - rid: 5891232930256650638
   KeepPlayModeChanges: 0
   PerformanceMode: 0
+  ForceStopFeedbacksOnDisable: 1
   references:
     version: 2
     RefIds:

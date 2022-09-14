@@ -48,7 +48,7 @@ namespace Descending.Party
 		public float TopClamp = 90.0f;
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
-
+		
 		// cinemachine
 		private float _cinemachineTargetPitch;
 
@@ -67,8 +67,12 @@ namespace Descending.Party
 		private CharacterController _controller;
 		private InputController _inputController;
 		private Transform _mainCamera;
-
+		private Vector3 _motion;
+		
 		private const float _threshold = 0.01f;
+
+		public bool IsSprinting => _inputController.Sprint;
+		public bool IsMoving => _inputController.Move != Vector2.zero;
 
 		private bool IsCurrentDeviceMouse
 		{
@@ -184,9 +188,10 @@ namespace Descending.Party
 			{
 				inputDirection = Vector3.zero;
 			}
-			
+
+			_motion = inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime;
 			// move the player
-			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+			_controller.Move(_motion);
 		}
 
 		private void JumpAndGravity()

@@ -21,7 +21,7 @@ namespace Descending.Attributes
         [SerializeField] private int _earIndex = 0;
         [SerializeField] private bool _hairAllowed = true;
         [SerializeField] private bool _eyebrowsAllowed = true;
-        [FormerlySerializedAs("_beardChance")] [SerializeField] private int _maleBeardChance = 75;
+        [SerializeField] private int _maleBeardChance = 75;
         [SerializeField] private int _femaleBeardChance = 75;
         [SerializeField] private List<Color> _skinColors = null;
         [SerializeField] private List<Color> _eyeColors = null;
@@ -38,10 +38,10 @@ namespace Descending.Attributes
         [SerializeField] private StartingSkillDictionary _startingSkills = null;
         [SerializeField] private List<Resistance> _resistances = null;
 
-        [SoundGroupAttribute] public List<string> AttackSoundsMale;
-        [SoundGroupAttribute] public List<string> AttackSoundsFemale;
-        [SoundGroupAttribute] public List<string> HitSoundsMale;
-        [SoundGroupAttribute] public List<string> HitSoundsFemale;
+        //[SoundGroupAttribute] public List<string> AttackSoundsMale;
+        //[SoundGroupAttribute] public List<string> AttackSoundsFemale;
+        //[SoundGroupAttribute] public List<string> HitSoundsMale;
+        //[SoundGroupAttribute] public List<string> HitSoundsFemale;
         [SoundGroupAttribute] public List<string> WoundSoundsMale;
         [SoundGroupAttribute] public List<string> WoundSoundsFemale;
         public StartingCharacteristicDictionary StartingCharacteristics => _startingCharacteristics;
@@ -80,20 +80,20 @@ namespace Descending.Attributes
         public Sprite Icon => _icon;
         public float ExpModifier => _expModifier;
 
-        public string GetAttackSound(Genders gender)
-        {
-            if(gender == Genders.Male)
-                return AttackSoundsMale[Random.Range(0, AttackSoundsMale.Count)];
-            else
-                return AttackSoundsFemale[Random.Range(0, AttackSoundsFemale.Count)];
-        }
+        // public string GetAttackSound(Genders gender)
+        // {
+        //     if(gender == Genders.Male)
+        //         return AttackSoundsMale[Random.Range(0, AttackSoundsMale.Count)];
+        //     else
+        //         return AttackSoundsFemale[Random.Range(0, AttackSoundsFemale.Count)];
+        // }
 
         public string GetWoundSound(Genders gender)
         {
             if(gender == Genders.Male)
-                return AttackSoundsMale[Random.Range(0, AttackSoundsMale.Count)];
+                return WoundSoundsMale[Random.Range(0, WoundSoundsMale.Count)];
             else
-                return AttackSoundsFemale[Random.Range(0, AttackSoundsFemale.Count)];
+                return WoundSoundsFemale[Random.Range(0, WoundSoundsFemale.Count)];
         }
     }
 }

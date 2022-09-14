@@ -1025,6 +1025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _partyManager: {fileID: 0}
   _projectileSpawnPoint: {fileID: 6115512148849636708}
+  _attackEffectSpawnPoint: {fileID: 0}
 --- !u!1 &6115512148849636709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,6 +1364,7 @@ GameObject:
   - component: {fileID: 6115512148742013602}
   - component: {fileID: 6115512148742013624}
   - component: {fileID: 6115512148265708247}
+  - component: {fileID: 2394250138251532534}
   m_Layer: 6
   m_Name: Player Controller
   m_TagString: Player
@@ -1706,6 +1708,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _partyManager: {fileID: 0}
+--- !u!114 &2394250138251532534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7673922425069960402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d65cf91c4bc79c45a4eb1cb7ecc8288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fpc: {fileID: 7673922425069960405}
+  _stoneStepSounds:
+  - footstep_concrete_walk_01
+  - footstep_concrete_walk_02
+  - footstep_concrete_walk_03
+  - footstep_concrete_walk_04
+  - footstep_concrete_walk_05
+  - footstep_concrete_walk_06
+  - footstep_concrete_walk_07
+  - footstep_concrete_walk_08
+  - footstep_concrete_walk_09
+  - footstep_concrete_walk_10
+  _grassStepSounds:
+  - footstep_grass_walk_01
+  - footstep_grass_walk_02
+  - footstep_grass_walk_03
+  - footstep_grass_walk_04
+  - footstep_grass_walk_05
+  - footstep_grass_walk_06
+  - footstep_grass_walk_07
+  - footstep_grass_walk_08
+  - footstep_grass_walk_09
+  - footstep_grass_walk_10
+  _stepSpeed: 0.5
+  _sprintSpeed: 0.28
 --- !u!1 &8560545272899786197
 GameObject:
   m_ObjectHideFlags: 0

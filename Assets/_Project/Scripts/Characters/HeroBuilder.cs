@@ -8,24 +8,24 @@ namespace Descending.Characters
 {
     public static class HeroBuilder
     {
-        public static Hero BuildHero(Genders gender, RaceDefinition race, ProfessionDefinition profession, int listIndex)
+        public static Hero BuildHero(GameObject partyObject, Genders gender, RaceDefinition race, ProfessionDefinition profession, int listIndex)
         {
             GameObject clone = GameObject.Instantiate(Database.instance.HeroPrefab, null);
 
             Hero hero = clone.GetComponent<Hero>();
             
-            hero.Setup(gender, race, profession, listIndex);
+            hero.Setup(partyObject, gender, race, profession, listIndex);
             
             return hero;
         }
         
-        public static Hero LoadHero(HeroSaveData saveData)
+        public static Hero LoadHero(GameObject partyObject, HeroSaveData saveData)
         {
             GameObject clone = GameObject.Instantiate(Database.instance.HeroPrefab, null);
 
             Hero hero = clone.GetComponent<Hero>();
             
-            hero.Load(saveData);
+            hero.Load(partyObject, saveData);
             
             return hero;
         }

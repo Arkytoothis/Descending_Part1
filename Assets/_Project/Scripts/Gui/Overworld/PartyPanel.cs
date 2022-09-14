@@ -117,5 +117,10 @@ namespace Descending.Gui
             _messageLabel.SetText(message.Text);
             _messageLabel.DOFade(0f, 3f);
         }
+
+        public void OnDisplayDamageText(FloatingTextParameters parameters)
+        {
+            TextManager_UI.instance.DisplayUIText(parameters.Text, _heroWidgets[parameters.Index].TextTransform.position, parameters.FontSize);
+        }
     }
 }
