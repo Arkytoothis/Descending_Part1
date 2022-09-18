@@ -199,19 +199,19 @@ namespace Descending.Enemies
         {
             _isActive = active;
             _modelTransform.gameObject.SetActive(_isActive);
-            _richAI.enabled = _isActive;
+            //_richAI.enabled = _isActive;
             _animator.enabled = _isActive;
-            _destinationSetter.enabled = _isActive;
+            //_destinationSetter.enabled = _isActive;
 
             if (_isActive == true)
             {
                 _lifeBar.Show();
-                _btOwner.StartBehaviour();
+                //_btOwner.StartBehaviour();
             }
             else
             {
                 _lifeBar.Hide();
-                _btOwner.StopBehaviour();
+                //_btOwner.StopBehaviour();
             }
         }
         

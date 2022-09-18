@@ -11,6 +11,7 @@ namespace Descending.Interactables
     {
         [SerializeField] private MMF_Player _player = null;
         [SerializeField, SoundGroupAttribute] private string[] _openSounds = null;
+        [SerializeField, SoundGroupAttribute] private string[] _creakSounds = null;
         [SerializeField, SoundGroupAttribute] private string[] _closeSounds = null;
         
         private bool _isOpen = false;
@@ -32,8 +33,11 @@ namespace Descending.Interactables
         private void Open()
         {
             //Debug.Log("Opening");
-            string sound = _openSounds[Random.Range(0, _openSounds.Length)];
-            MasterAudio.PlaySound3DAtVector3(sound, transform.position, 1f, 1f);
+            string openSound = _openSounds[Random.Range(0, _openSounds.Length)];
+            MasterAudio.PlaySound3DAtVector3(openSound, transform.position, 1f, 1f);
+
+            string creakSound = _creakSounds[Random.Range(0, _creakSounds.Length)];
+            MasterAudio.PlaySound3DAtVector3(creakSound, transform.position, 1f, 1f);
             _player.FeedbacksList[0].Play(transform.position);
             _isOpen = true;
         }
@@ -41,8 +45,8 @@ namespace Descending.Interactables
         private void Close()
         {
             //Debug.Log("Closing");
-            string sound = _closeSounds[Random.Range(0, _closeSounds.Length)];
-            MasterAudio.PlaySound3DAtVector3(sound, transform.position, 1f, 1f);
+            string creakSound = _creakSounds[Random.Range(0, _creakSounds.Length)];
+            MasterAudio.PlaySound3DAtVector3(creakSound, transform.position, 1f, 1f);
             _player.FeedbacksList[1].Play(transform.position);
             _isOpen = false;
         }

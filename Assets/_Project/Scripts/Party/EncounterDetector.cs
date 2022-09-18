@@ -13,10 +13,10 @@ namespace Descending.Party
             if (other.gameObject.CompareTag("Encounter"))
             {
                 Encounter encounter = other.gameObject.GetComponentInParent<Encounter>();
-                if (encounter != null)
+                
+                if (encounter != null && encounter.IsActive)
                 {
-                    if(encounter.IsActive)
-                        encounter.Trigger();
+                    encounter.Trigger();
                 }
             }
         }

@@ -73,7 +73,7 @@ namespace Descending.Encounters
 
             for (int i = 0; i < _currentEncounter.Enemies.Count; i++)
             {
-                _currentEncounter.Enemies[i].transform.position = _formationPositions[i].position;
+                //_currentEncounter.Enemies[i].transform.position = _formationPositions[i].position;
             }
             
             onSetPartyMovementEnabled.Invoke(false);

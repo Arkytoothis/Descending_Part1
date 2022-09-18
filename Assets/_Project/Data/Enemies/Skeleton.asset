@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Skeleton
   Key: Skeleton
   ExpValue: 25
-  Prefab: {fileID: 4302448175089489570, guid: a6ac6a9ca60ebc14eb60744efcb1b1ec, type: 3}
+  Prefab: {fileID: 1014152241227981622, guid: 9cc8f5d652f3646419d5a7297b6664f3, type: 3}
   Icon: {fileID: 0}
   Group: 1
   HitEffect: {fileID: 198615267133080452, guid: 17868f2bfcb8edd46be115911a5ffda5,

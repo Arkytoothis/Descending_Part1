@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Ghost
   Key: Ghost Male
   ExpValue: 25
-  Prefab: {fileID: 1014152241227981622, guid: 5fe1b39e8b73b7244ac5e47634418817, type: 3}
+  Prefab: {fileID: 1014152241227981622, guid: 83951d2865da7504b9491891d7c74360, type: 3}
   Icon: {fileID: 0}
   Group: 1
   HitEffect: {fileID: 198615267133080452, guid: 17868f2bfcb8edd46be115911a5ffda5,

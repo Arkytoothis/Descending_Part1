@@ -293,7 +293,7 @@ MonoBehaviour:
   _openDelay: 2
   _closeDelay: 3
   _openTimeMult: 3
-  _closeTimeMult: 0.5
+  _closeTimeMult: 3
   _damageType: {fileID: 0}
   _minDamage: 1
   _maxDamage: 3

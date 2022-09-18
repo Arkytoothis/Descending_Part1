@@ -59,7 +59,7 @@ namespace Descending.Traps
         private void PlayOpenSound()
         {
             string sound = _openSounds[Random.Range(0, _openSounds.Length)];
-            MasterAudio.PlaySound3DAtVector3(sound, transform.position, 1f, 0.8f);
+            MasterAudio.PlaySound3DAtVector3(sound, transform.position, 0.5f, 0.8f);
         }
         
         private IEnumerator Close_Coroutine()
@@ -84,7 +84,7 @@ namespace Descending.Traps
         private void PlayCloseSound()
         {
             string sound = _closeSounds[Random.Range(0, _closeSounds.Length)];
-            MasterAudio.PlaySound3DAtVector3(sound, transform.position, 1f, 0.8f);
+            MasterAudio.PlaySound3DAtVector3(sound, transform.position, 0.5f, 0.8f);
         }
         
         public override void ApplyDamage(PartyData partyData)

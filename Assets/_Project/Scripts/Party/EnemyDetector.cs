@@ -11,14 +11,14 @@ namespace Descending.Player
         
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Enemy"))
-            {
-                Enemy enemy = other.gameObject.GetComponent<Enemy>();
-                if (enemy != null)
-                {
-                    enemy.SetTarget(_playerObject);
-                }
-            }
+            // if (other.gameObject.CompareTag("Enemy"))
+            // {
+            //     Enemy enemy = other.gameObject.GetComponent<Enemy>();
+            //     if (enemy != null)
+            //     {
+            //         enemy.SetTarget(_playerObject);
+            //     }
+            // }
         }
     }
 }

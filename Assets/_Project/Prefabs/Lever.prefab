@@ -115,6 +115,11 @@ MonoBehaviour:
   _animator: {fileID: 4987576452215069396}
   _onTimeMult: 10
   _offTimeMult: 10
+  _onSounds:
+  - Switch and Lever 3_1
+  _offSounds:
+  - Switch and Lever 3_2
+  _traps: []
 --- !u!1 &5552284674510528939
 GameObject:
   m_ObjectHideFlags: 0

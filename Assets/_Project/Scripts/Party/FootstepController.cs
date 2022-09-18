@@ -3,9 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DarkTonic.MasterAudio;
 using Descending.Core;
-using UnityEditor.Search;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Descending.Party
@@ -17,6 +15,7 @@ namespace Descending.Party
         [SerializeField, SoundGroupAttribute] private List<string> _grassStepSounds = null;
         [SerializeField] private float _stepSpeed = 0.5f;
         [SerializeField] private float _sprintSpeed = 0.3f;
+        [SerializeField] private float _stepVolume = 1f;
 
         private bool _handleFootsteps = true;
         private float _footstepTimer = 0f;
@@ -44,7 +43,7 @@ namespace Descending.Party
                         if (groundTag.Tag == GroundTags.Stone)
                         {
                             string sound = _stoneStepSounds[(int) Random.Range(0, _stoneStepSounds.Count)];
-                            MasterAudio.PlaySound3DAtVector3(sound, transform.position, 0.6f, 1f);
+                            MasterAudio.PlaySound3DAtVector3(sound, transform.position, _stepVolume, 1f);
                         }
                         
                         _footstepTimer = GetStepSpeed();
@@ -56,15 +55,16 @@ namespace Descending.Party
                     if (terrain != null)
                     {
                         string layerName = GetLayerName(hit.point, terrain);
+                        
                         if (layerName == "Grass Light" || layerName == "Grass Dark")
                         {
                             string sound = _grassStepSounds[(int) Random.Range(0, _grassStepSounds.Count)];
-                            MasterAudio.PlaySound3DAtVector3(sound, transform.position, 0.6f, 1f);
+                            MasterAudio.PlaySound3DAtVector3(sound, transform.position, _stepVolume, 1f);
                         }
                         else if (layerName == "Stone Light" || layerName == "Stone Dark")
                         {
                             string sound = _stoneStepSounds[(int) Random.Range(0, _stoneStepSounds.Count)];
-                            MasterAudio.PlaySound3DAtVector3(sound, transform.position, 0.6f, 1f);
+                            MasterAudio.PlaySound3DAtVector3(sound, transform.position, _stepVolume, 1f);
                         }
 
                         _footstepTimer = GetStepSpeed();

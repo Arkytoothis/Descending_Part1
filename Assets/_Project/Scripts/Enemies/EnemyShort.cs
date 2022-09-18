@@ -7,15 +7,15 @@ namespace Descending
     [System.Serializable]
     public class EnemyShort
     {
-        [SerializeField] private string _key = "";
+        [SerializeField] private EnemyDefinition _enemyDefinition = null;
         [SerializeField] private int _level = 0;
 
-        public string Key => _key;
+        public EnemyDefinition EnemyDefinition => _enemyDefinition;
         public int Level => _level;
 
-        public EnemyShort(string key, int level)
+        public EnemyShort(EnemyDefinition enemyDefinition, int level)
         {
-            _key = key;
+            _enemyDefinition = enemyDefinition;
             _level = level;
         }
     }

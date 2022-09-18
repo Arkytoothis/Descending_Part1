@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Orc Warrior
   Key: Orc Warrior
   ExpValue: 25
-  Prefab: {fileID: 4302448175089489570, guid: ec1896a56ad76a747bd2b9d5a6fc9213, type: 3}
+  Prefab: {fileID: 1014152241227981622, guid: c1f1119e478713740a9374d6e25b2f5a, type: 3}
   Icon: {fileID: 1161443714384828998, guid: fe42c8b526e77e54ab91d0590272d9e8, type: 3}
   Group: 0
   HitEffect: {fileID: 198615267133080452, guid: 17868f2bfcb8edd46be115911a5ffda5,

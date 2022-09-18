@@ -63,10 +63,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 216592670160634647}
   _openSounds:
-  - door_old_wooden_squeak_01
-  - door_old_wooden_squeak_03
+  - Door 10 Open
+  _creakSounds:
+  - Door 10 Creak
   _closeSounds:
-  - door_old_wooden_squeak_04
+  - Door 10 Open
 --- !u!114 &216592670160634647
 MonoBehaviour:
   m_ObjectHideFlags: 0

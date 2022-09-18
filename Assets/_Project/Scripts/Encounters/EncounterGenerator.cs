@@ -38,7 +38,8 @@ namespace Descending.Encounters
             {
                 int rndIndex = Random.Range(0, _enemyGroupLists[(int) encounter.Group].Count);
                 string enemyKey = _enemyGroupLists[(int) encounter.Group][rndIndex];
-                enemies.Add(new EnemyShort(enemyKey, 1));
+                EnemyDefinition definition = Database.instance.Enemies.GetEnemy(enemyKey);
+                enemies.Add(new EnemyShort(definition, 1));
             }
 
             encounter.SetupData(encounter.Difficulty, encounter.Group, enemies);

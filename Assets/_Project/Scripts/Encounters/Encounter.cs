@@ -41,16 +41,17 @@ namespace Descending.Encounters
 
         private void Start()
         {
-            EncounterGenerator.BuildEncounter(this);
+            //EncounterGenerator.BuildEncounter(this);
             SpawnEnemies();
             _worldMarker.SetActive(false);
+            Deactivate();
         }
         
         public void SpawnEnemies()
         {
             for (int i = 0; i < _enemyData.Count; i++)
             {
-                EnemyDefinition definition = Database.instance.Enemies.GetEnemy(_enemyData[i].Key);
+                EnemyDefinition definition = _enemyData[i].EnemyDefinition;
                 GameObject clone = Instantiate(definition.Prefab, _enemiesParent);
                 clone.transform.position = _formation[i].position;
                 clone.transform.rotation = _formation[i].rotation;

@@ -33,42 +33,42 @@ namespace Descending.Player
 
         public void ProcessLeftClick(Vector3 hitPoint, Enemy target)
         {
-            if (_canAttack == false) return;
-            float distance = 0f;
-            
-            if (target.IsAlive() == false)
-            {
-                distance = Vector3.Distance(transform.position, target.transform.position);
-
-                if (distance <= 5f)
-                {
-                    target.Loot();
-                    return;
-                }
-            }
-            
-            Hero hero = _partyManager.GetCurrentHero();
-            Item meleeWeapon = hero.Inventory.GetMeleeWeapon();
-            Item rangedWeapon = hero.Inventory.GetRangedWeapon();
-            
-            if (hero == null) return;
-            
-            distance = Vector3.Distance(transform.position, target.transform.position);
-            
-            if(meleeWeapon != null && meleeWeapon.Key != "" && distance <= meleeWeapon.GetWeaponData().Range)
-            {
-                MeleeAttack(meleeWeapon, hero, target);
-                StartCoroutine(TriggerDelay(meleeWeapon.GetWeaponData().Delay));
-            }
-            else if (rangedWeapon != null && rangedWeapon.Key != "" && distance <= rangedWeapon.GetWeaponData().Range)
-            {
-                ShootProjectile(rangedWeapon, hero, target, hitPoint);
-                StartCoroutine(TriggerDelay(rangedWeapon.GetWeaponData().Delay));
-            }
-            else
-            {
-                StartCoroutine(TriggerDelay(1f));
-            }
+            // if (_canAttack == false) return;
+            // float distance = 0f;
+            //
+            // if (target.IsAlive() == false)
+            // {
+            //     distance = Vector3.Distance(transform.position, target.transform.position);
+            //
+            //     if (distance <= 5f)
+            //     {
+            //         target.Loot();
+            //         return;
+            //     }
+            // }
+            //
+            // Hero hero = _partyManager.GetCurrentHero();
+            // Item meleeWeapon = hero.Inventory.GetMeleeWeapon();
+            // Item rangedWeapon = hero.Inventory.GetRangedWeapon();
+            //
+            // if (hero == null) return;
+            //
+            // distance = Vector3.Distance(transform.position, target.transform.position);
+            //
+            // if(meleeWeapon != null && meleeWeapon.Key != "" && distance <= meleeWeapon.GetWeaponData().Range)
+            // {
+            //     MeleeAttack(meleeWeapon, hero, target);
+            //     StartCoroutine(TriggerDelay(meleeWeapon.GetWeaponData().Delay));
+            // }
+            // else if (rangedWeapon != null && rangedWeapon.Key != "" && distance <= rangedWeapon.GetWeaponData().Range)
+            // {
+            //     ShootProjectile(rangedWeapon, hero, target, hitPoint);
+            //     StartCoroutine(TriggerDelay(rangedWeapon.GetWeaponData().Delay));
+            // }
+            // else
+            // {
+            //     StartCoroutine(TriggerDelay(1f));
+            // }
         }
 
         private IEnumerator TriggerDelay(float delay)
